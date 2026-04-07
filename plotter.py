@@ -10,15 +10,15 @@ class MissionVisualizer:
         fig = plt.figure(figsize=(10, 7))
         ax = fig.add_subplot(111, projection='3d')
 
-        # Plot Spacecraft
-        sc = ax.scatter(spacecraft.pos[:, 0], spacecraft.pos[:, 1], spacecraft.pos[:, 2],
-                        c=spacecraft.speeds, cmap='viridis')
+        # Plot Spacecraft path in Red
+        ax.plot(spacecraft.pos[:, 0], spacecraft.pos[:, 1], spacecraft.pos[:, 2],
+                color='red', label='Artemis II Path', alpha=0.7)
 
-        # Plot Earth at origin
-        ax.plot([0], [0], [0], 'go', markersize=10, label="Earth")
+        # Plot Earth at origin in Blue
+        ax.plot([0], [0], [0], 'bo', markersize=15, label="Earth")
 
-        plt.colorbar(sc, label='Speed (km/s)')
         ax.set_title("Artemis II Trajectory")
+        ax.legend()
         plt.show()
 
     def plot_distance_profile(self, spacecraft):
