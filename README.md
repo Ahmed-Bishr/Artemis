@@ -26,6 +26,13 @@ A Python tool for loading, analysing, and visualising the trajectory of NASA's *
 
 ---
 
+## Data Source
+
+The trajectory data used in this project is based on official NASA ephemeris files.
+- **Download Ephemeris Data:** [NASA Artemis II Real-Time Tracking](https://www.nasa.gov/missions/artemis/artemis-2/track-nasas-artemis-ii-mission-in-real-time/)
+
+---
+
 ## Prerequisites
 
 - Python **3.8** or later
