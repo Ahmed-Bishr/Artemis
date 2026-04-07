@@ -3,7 +3,6 @@ import numpy as np
 
 
 class TelemetryLoader:
-    """Static utility to load NASA OEM files."""
 
     @staticmethod
     def load_oem(file_path):

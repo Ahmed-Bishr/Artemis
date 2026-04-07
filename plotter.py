@@ -10,11 +10,9 @@ class MissionVisualizer:
         fig = plt.figure(figsize=(10, 7))
         ax = fig.add_subplot(111, projection='3d')
 
-        # Plot Spacecraft path in Red
         ax.plot(spacecraft.pos[:, 0], spacecraft.pos[:, 1], spacecraft.pos[:, 2],
                 color='red', label='Artemis II Path', alpha=0.7)
 
-        # Plot Earth at origin in Blue
         ax.plot([0], [0], [0], 'bo', markersize=15, label="Earth")
 
         ax.set_title("Artemis II Trajectory")

@@ -5,13 +5,13 @@ from astropy.time import Time
 from astropy.coordinates import get_body
 
 class CelestialBody:
-    """Base class for Earth and Moon."""
+
     def __init__(self, name, location=None):
         self.name = name
-        self.location = location # EarthLocation for ground stations
+        self.location = location
 
 class ArtemisCapsule:
-    """Handles the trajectory data logic."""
+
     def __init__(self, times, positions, velocities):
         self.times = Time(times)
         self.pos = positions  # km
@@ -30,7 +30,6 @@ class ArtemisCapsule:
 
 
     def get_moon_trajectory(times):
-        """Fetches Moon GCRS positions for a list of Astropy Times."""
+
         moon_coords = get_body("moon", times)
-        # Return as [N, 3] array of km for consistent math with your spacecraft
         return moon_coords.cartesian.xyz.to('km').value.T

@@ -13,7 +13,6 @@ class MissionAnimator:
 
     def start(self, speed_multiplier=3600):
         # 1. Fetch Moon Data (White)
-        # We get the moon's position for every timestamp in the spacecraft data
         moon_coords = get_body("moon", self.nav.sc.times)
         self.moon_pos = moon_coords.cartesian.xyz.to('km').value.T
 
