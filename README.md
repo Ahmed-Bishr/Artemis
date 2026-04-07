@@ -1,4 +1,4 @@
-# Artemis II Trajectory Analyser
+# Artemis II Trajectory Analyzer
 
 A Python tool for loading, analysing, and visualising the trajectory of NASA's **Artemis II** lunar mission from real telemetry data in NASA OEM (Orbit Ephemeris Message) format.
 
